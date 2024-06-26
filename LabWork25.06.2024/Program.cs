@@ -72,3 +72,4 @@ public static class TokenValidationMiddlewareExtensions
         return builder.UseMiddleware<TokenValidationMiddleware>();
     }
 }
+
