@@ -1,9 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-
-app.UseTokenValidation();
-
 int Fibonacci(int n)
 {
     if (n < 0 || n > 40) throw new ArgumentOutOfRangeException(nameof(n), "Index must be between 0 and 40.");
@@ -20,6 +17,9 @@ int Fibonacci(int n)
     }
     return b;
 }
+
+app.UseTokenValidation();
+
 
 app.MapGet("/fibonacci", (HttpRequest request) =>
 {
